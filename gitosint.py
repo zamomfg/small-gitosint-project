@@ -57,9 +57,8 @@ def get_commit_info():
     return committers
 
 
-def find_text_in_repo():
+def find_text_in_repo(strings_to_find):
 
-    strings_to_find = str(args["search"]).split(",")
     commits = repo.iter_commits()
     for commit in commits:
 
@@ -73,7 +72,10 @@ def find_text_in_repo():
 
                 print(commit.hexsha, find_str, blob.path, regex)
 
-find_text_in_repo()
+
+if args["search"]:
+    strings_to_find = str(args["search"]).split(",")
+    find_text_in_repo(strings_to_find)
 
 
 commits = get_commit_info()
