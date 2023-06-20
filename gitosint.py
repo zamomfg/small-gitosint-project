@@ -25,15 +25,16 @@ if git_url:
     repo_path = os.path.join(osint_path, git_name)
     repo = git.Repo.clone_from(git_url, repo_path)
 elif args["repo"]:
-    repo_path = args["repo"]
+    repo_path =  os.path.realpath(args["repo"])
+    print("repo path: ", repo_path)
     git_name = os.path.basename(os.path.normpath(repo_path))
     repo = git.Repo(repo_path)
 
 
-print(repo_path)
+# print(repo_path)
 
-heads = repo.heads
-master = heads.master
+# heads = repo.heads
+# master = heads.master
 
 commits = repo.iter_commits()
 

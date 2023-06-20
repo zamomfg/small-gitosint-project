@@ -11,7 +11,7 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "justMyCode": true,
-            "args": ["-r", "${workspaceFolder}/testrepos/recon-ng"]
+            "args": ["-r", "${workspaceFolder}"]
         },
         {
             "name": "Python: repo from url",
