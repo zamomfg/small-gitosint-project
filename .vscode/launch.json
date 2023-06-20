@@ -11,7 +11,7 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "justMyCode": true,
-            "args": ["-r", "${workspaceFolder}"]
+            "args": ["-r", "${workspaceFolder}", "-s", "TODO,author"]
         },
         {
             "name": "Python: repo from url",
